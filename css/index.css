@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-family: Ibarra Real Nova; }
+
+.checkout-form {
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  .checkout-form .main-content {
+    background-color: white;
+    width: 70rem;
+    height: 88rem;
+    position: absolute;
+    top: 5rem;
+    left: 50rem; }
+    .checkout-form .main-content .header {
+      padding: 2rem 5rem;
+      color: gray;
+      border-bottom: 1px solid #cccccc;
+      background-color: #f2f2f2; }
+    .checkout-form .main-content .personal-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+      width: 70rem;
+      border-bottom: 1px solid #cccccc; }
+      .checkout-form .main-content .personal-info .test {
+        padding: 2rem 1rem; }
+      .checkout-form .main-content .personal-info fieldset {
+        position: relative;
+        width: 28rem;
+        height: 4rem;
+        background: white;
+        border-radius: 3px;
+        border: 1px solid #cccccc; }
+        .checkout-form .main-content .personal-info fieldset input {
+          position: absolute;
+          left: 5rem;
+          border: none;
+          width: 17rem;
+          height: 3.3rem;
+          caret-color: #eeaeca; }
+          .checkout-form .main-content .personal-info fieldset input:focus {
+            outline: none; }
+        .checkout-form .main-content .personal-info fieldset .icon-left {
+          position: absolute;
+          left: 5px;
+          width: 30px;
+          height: 37px;
+          color: #cccccc;
+          border-right: 1px solid #cccccc;
+          line-height: 3; }
+        .checkout-form .main-content .personal-info fieldset ::placeholder {
+          width: 5rem;
+          color: gray;
+          font-size: 1.3rem; }
+    .checkout-form .main-content .general-info {
+      border-bottom: 1px solid #cccccc; }
+      .checkout-form .main-content .general-info .middle {
+        padding: 0 7rem; }
+      .checkout-form .main-content .general-info .first-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 2rem 0; }
+      .checkout-form .main-content .general-info .second-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        .checkout-form .main-content .general-info .second-block .test {
+          padding-bottom: 2rem; }
+          .checkout-form .main-content .general-info .second-block .test fieldset {
+            width: 58rem; }
+            .checkout-form .main-content .general-info .second-block .test fieldset input {
+              width: 50rem; }
+        .checkout-form .main-content .general-info .second-block textarea {
+          width: 58rem;
+          height: 8rem;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+          resize: none;
+          padding: 1rem; }
+          .checkout-form .main-content .general-info .second-block textarea::placeholder {
+            font-family: Arial; }
+          .checkout-form .main-content .general-info .second-block textarea:focus {
+            outline: none; }
+        .checkout-form .main-content .general-info .second-block ::placeholder {
+          margin-left: 2rem;
+          color: gray;
+          font-size: 1.3rem; }
+      .checkout-form .main-content .general-info fieldset {
+        position: relative;
+        width: 12rem;
+        height: 4rem;
+        background: white;
+        border-radius: 3px;
+        border: 1px solid #cccccc; }
+        .checkout-form .main-content .general-info fieldset input {
+          position: absolute;
+          left: 1rem;
+          border: none;
+          width: 10rem;
+          height: 3.3rem;
+          caret-color: #eeaeca; }
+          .checkout-form .main-content .general-info fieldset input:focus {
+            outline: none; }
+        .checkout-form .main-content .general-info fieldset ::placeholder {
+          margin-left: 2rem;
+          color: gray;
+          font-size: 1.3rem; }
+      .checkout-form .main-content .general-info .select-container {
+        position: relative;
+        width: 20rem; }
+        .checkout-form .main-content .general-info .select-container .country {
+          width: 20rem;
+          height: 4rem;
+          background: white;
+          border-radius: 3px;
+          border: 1px solid #cccccc;
+          padding-right: 25px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          padding-left: 1rem; }
+          .checkout-form .main-content .general-info .select-container .country:focus {
+            outline: 1px solid #eeaeca; }
+        .checkout-form .main-content .general-info .select-container::after {
+          content: "";
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 7px solid gray;
+          position: absolute;
+          top: 16px;
+          right: 19px;
+          pointer-events: none; }
+    .checkout-form .main-content .payment-info {
+      border-bottom: 1px solid #cccccc;
+      /* Hide default HTML checkbox */
+      /* The slider */
+      /* Rounded sliders */ }
+      .checkout-form .main-content .payment-info .buttons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        margin: 2rem 4rem; }
+      .checkout-form .main-content .payment-info .container {
+        font-family: Arial;
+        font-size: 1.6rem;
+        color: #262626;
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin: 0 2rem; }
+        .checkout-form .main-content .payment-info .container input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0; }
+        .checkout-form .main-content .payment-info .container .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          background-color: #eeeeee;
+          border-radius: 50%; }
+      .checkout-form .main-content .payment-info .container:hover input ~ .checkmark {
+        background-color: #eeeeee; }
+      .checkout-form .main-content .payment-info .container input:checked ~ .checkmark {
+        background-color: #eeaeca; }
+      .checkout-form .main-content .payment-info .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none; }
+      .checkout-form .main-content .payment-info .container input:checked ~ .checkmark:after {
+        display: block; }
+      .checkout-form .main-content .payment-info .container .checkmark:after {
+        top: 6px;
+        left: 6px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: white; }
+      .checkout-form .main-content .payment-info .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+        border: 1px solid #cccccc;
+        border-radius: 34px;
+        margin-left: 15rem; }
+        .checkout-form .main-content .payment-info .switch p {
+          position: absolute;
+          font-family: Arial;
+          width: 100px;
+          height: 40px;
+          right: 30px; }
+      .checkout-form .main-content .payment-info .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0; }
+      .checkout-form .main-content .payment-info .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s; }
+      .checkout-form .main-content .payment-info .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s; }
+      .checkout-form .main-content .payment-info input:checked + .slider {
+        background-color: lightgreen; }
+      .checkout-form .main-content .payment-info input:focus + .slider {
+        box-shadow: 0 0 1px lightgreen; }
+      .checkout-form .main-content .payment-info input:checked + .slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px); }
+      .checkout-form .main-content .payment-info .slider.round {
+        border-radius: 34px; }
+      .checkout-form .main-content .payment-info .slider.round:before {
+        border: 1px solid #cccccc;
+        border-radius: 50%; }
+      .checkout-form .main-content .payment-info .test {
+        margin: 2rem 6rem; }
+        .checkout-form .main-content .payment-info .test fieldset {
+          position: relative;
+          width: 58rem;
+          height: 4rem;
+          background: white;
+          border-radius: 3px;
+          border: 1px solid #cccccc; }
+          .checkout-form .main-content .payment-info .test fieldset input {
+            position: absolute;
+            left: 1rem;
+            border: none;
+            width: 10rem;
+            height: 3.3rem;
+            caret-color: #eeaeca; }
+            .checkout-form .main-content .payment-info .test fieldset input:focus {
+              outline: none; }
+          .checkout-form .main-content .payment-info .test fieldset ::placeholder {
+            margin-left: 2rem;
+            color: gray;
+            font-size: 1.3rem; }
+      .checkout-form .main-content .payment-info .middle {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row; }
+        .checkout-form .main-content .payment-info .middle .first {
+          width: 40rem; }
+        .checkout-form .main-content .payment-info .middle .second {
+          width: 12rem;
+          margin-left: 6rem; }
+      .checkout-form .main-content .payment-info .date {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 2rem 6rem;
+        padding-bottom: 3rem; }
+        .checkout-form .main-content .payment-info .date h5 {
+          font-family: Arial;
+          font-size: 1.2rem;
+          color: grey; }
+        .checkout-form .main-content .payment-info .date .select-container {
+          position: relative;
+          width: 20rem;
+          margin: 0 9rem; }
+          .checkout-form .main-content .payment-info .date .select-container .month {
+            width: 20rem;
+            height: 4rem;
+            background: white;
+            border-radius: 3px;
+            border: 1px solid #cccccc;
+            padding-right: 25px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding-left: 1rem; }
+            .checkout-form .main-content .payment-info .date .select-container .month:focus {
+              outline: 1px solid #eeaeca; }
+          .checkout-form .main-content .payment-info .date .select-container::after {
+            content: "";
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 7px solid gray;
+            position: absolute;
+            top: 16px;
+            right: 19px;
+            pointer-events: none; }
+        .checkout-form .main-content .payment-info .date fieldset {
+          position: relative;
+          width: 12rem;
+          height: 4rem;
+          background: white;
+          border-radius: 3px;
+          border: 1px solid #cccccc; }
+          .checkout-form .main-content .payment-info .date fieldset input {
+            position: absolute;
+            left: 1rem;
+            border: none;
+            width: 10rem;
+            height: 3.3rem;
+            caret-color: #eeaeca; }
+            .checkout-form .main-content .payment-info .date fieldset input:focus {
+              outline: none; }
+          .checkout-form .main-content .payment-info .date fieldset ::placeholder {
+            margin-left: 2rem;
+            color: gray;
+            font-size: 1.3rem; }
+    .checkout-form .main-content .footer {
+      position: relative;
+      background-color: #f2f2f2;
+      height: 12rem; }
+      .checkout-form .main-content .footer button {
+        border: 1px solid crimson;
+        background-color: crimson;
+        font-family: Ibarra Real Nova;
+        font-size: 2rem;
+        color: #f2f2f2;
+        width: 13rem;
+        height: 4rem;
+        position: absolute;
+        top: 4rem;
+        right: 10%; }

@@ -1,0 +1,539 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-family: Ibarra Real Nova;
+}
+
+.checkout-form {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .main-content {
+    background-color: hsl(0, 0, 100);
+    width: 70rem;
+    height: 88rem;
+    position: absolute;
+    top: 5rem;
+    left: 50rem;
+
+    .header {
+      padding: 2rem 5rem;
+      color: gray;
+      border-bottom: 1px solid #cccccc;
+      background-color: #f2f2f2;
+    }
+
+    .personal-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+      width: 70rem;
+      border-bottom: 1px solid #cccccc;
+
+
+      .test {
+        padding: 2rem 1rem;
+
+      }
+
+      fieldset {
+        position: relative;
+        width: 28rem;
+        height: 4rem;
+        background: hsl(0, 0, 100);
+        border-radius: 3px;
+        border: 1px solid #cccccc;
+
+
+        input {
+          position: absolute;
+          left: 5rem;
+          border: none;
+          width: 17rem;
+          height: 3.3rem;
+          caret-color: #eeaeca;
+
+          &:focus {
+            outline: none;
+          }
+
+
+        }
+
+        .icon-left {
+          position: absolute;
+          left: 5px;
+          width: 30px;
+          height: 37px;
+          color: #cccccc;
+          border-right: 1px solid #cccccc;
+          line-height: 3;
+
+
+        }
+
+        ::placeholder {
+          width: 5rem;
+          color: gray;
+          font-size: 1.3rem;
+
+
+        }
+      }
+    }
+
+    .general-info {
+      border-bottom: 1px solid #cccccc;
+
+      .middle {
+        padding: 0 7rem;
+      }
+
+      .first-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 2rem 0;
+      }
+
+      .second-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .test {
+          padding-bottom: 2rem;
+
+          fieldset {
+            width: 58rem;
+
+            input {
+              width: 50rem;
+            }
+          }
+
+        }
+
+        textarea {
+          width: 58rem;
+          height: 8rem;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+          resize: none;
+          padding: 1rem;
+
+          &::placeholder {
+            font-family: Arial;
+          }
+
+          &:focus {
+            outline: none;
+
+          }
+        }
+
+        ::placeholder {
+          margin-left: 2rem;
+          color: gray;
+          font-size: 1.3rem;
+
+        }
+
+
+      }
+
+      fieldset {
+        position: relative;
+        width: 12rem;
+        height: 4rem;
+        background: hsl(0, 0, 100);
+        border-radius: 3px;
+        border: 1px solid #cccccc;
+
+        input {
+          position: absolute;
+          left: 1rem;
+          border: none;
+          width: 10rem;
+          height: 3.3rem;
+          caret-color: #eeaeca;
+
+          &:focus {
+            outline: none;
+          }
+
+        }
+
+        ::placeholder {
+          margin-left: 2rem;
+          color: gray;
+          font-size: 1.3rem;
+
+        }
+      }
+
+      .select-container {
+        position: relative;
+        width: 20rem;
+
+        .country {
+          width: 20rem;
+          height: 4rem;
+          background: hsl(0, 0, 100);
+          border-radius: 3px;
+          border: 1px solid #cccccc;
+          padding-right: 25px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          padding-left: 1rem;
+
+          &:focus {
+            outline: 1px solid #eeaeca;
+          }
+
+        }
+
+        &::after {
+          content: "";
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 7px solid gray;
+          position: absolute;
+          top: 16px;
+          right: 19px;
+          pointer-events: none;
+        }
+
+      }
+    }
+
+    .payment-info {
+      border-bottom: 1px solid #cccccc;
+
+      .buttons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        margin: 2rem 4rem;
+      }
+
+      //RADIOBUTTON
+      .container {
+        font-family: Arial;
+        font-size: 1.6rem;
+        color: #262626;
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin: 0 2rem;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          background-color: #eeeeee;
+          border-radius: 50%;
+        }
+      }
+
+      .container:hover input ~ .checkmark {
+        background-color: #eeeeee;
+      }
+
+      .container input:checked ~ .checkmark {
+        background-color: #eeaeca;
+      }
+
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      // Show the indicator (dot/circle) when checked
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      // Style the indicator (dot/circle)
+      .container .checkmark:after {
+        top: 6px;
+        left: 6px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: white;
+      }
+
+      // TOGGLE
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+        border: 1px solid #cccccc;
+        border-radius: 34px;
+        margin-left: 15rem;
+
+        p {
+          position: absolute;
+          font-family: Arial;
+          width: 100px;
+          height: 40px;
+          right: 30px;
+        }
+
+      }
+
+      /* Hide default HTML checkbox */
+      .switch input {
+
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+
+
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: lightgreen;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px lightgreen;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border: 1px solid #cccccc;
+        border-radius: 50%;
+
+      }
+
+      .test {
+        margin: 2rem 6rem;
+
+
+        fieldset {
+          position: relative;
+          width: 58rem;
+          height: 4rem;
+          background: hsl(0, 0, 100);
+          border-radius: 3px;
+          border: 1px solid #cccccc;
+
+          input {
+            position: absolute;
+            left: 1rem;
+            border: none;
+            width: 10rem;
+            height: 3.3rem;
+            caret-color: #eeaeca;
+
+            &:focus {
+              outline: none;
+            }
+
+          }
+
+          ::placeholder {
+            margin-left: 2rem;
+            color: gray;
+            font-size: 1.3rem;
+
+          }
+        }
+
+      }
+
+      .middle {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+
+        .first {
+          width: 40rem;
+        }
+
+        .second {
+          width: 12rem;
+          margin-left: 6rem;
+
+        }
+      }
+
+      .date {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 2rem 6rem;
+        padding-bottom: 3rem;
+
+        & h5 {
+          font-family: Arial;
+          font-size: 1.2rem;
+          color: grey;
+
+        }
+
+        .select-container {
+          position: relative;
+          width: 20rem;
+          margin: 0 9rem;
+
+          .month {
+            width: 20rem;
+            height: 4rem;
+            background: hsl(0, 0, 100);
+            border-radius: 3px;
+            border: 1px solid #cccccc;
+            padding-right: 25px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding-left: 1rem;
+
+            &:focus {
+              outline: 1px solid #eeaeca;
+            }
+
+          }
+
+          &::after {
+            content: "";
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 7px solid gray;
+            position: absolute;
+            top: 16px;
+            right: 19px;
+            pointer-events: none;
+          }
+
+        }
+
+        fieldset {
+          position: relative;
+          width: 12rem;
+          height: 4rem;
+          background: hsl(0, 0, 100);
+          border-radius: 3px;
+          border: 1px solid #cccccc;
+
+          input {
+            position: absolute;
+            left: 1rem;
+            border: none;
+            width: 10rem;
+            height: 3.3rem;
+            caret-color: #eeaeca;
+
+            &:focus {
+              outline: none;
+            }
+
+          }
+
+          ::placeholder {
+            margin-left: 2rem;
+            color: gray;
+            font-size: 1.3rem;
+
+          }
+        }
+      }
+
+    }
+
+    .footer {
+      position: relative;
+      background-color: #f2f2f2;
+      height: 12rem;
+
+      button {
+        border: 1px solid crimson;
+        background-color: crimson;
+        font-family: Ibarra Real Nova;
+        font-size: 2rem;
+        color: #f2f2f2;
+        width: 13rem;
+        height: 4rem;
+        position: absolute;
+        top: 4rem;
+        right: 10%;
+      }
+    }
+
+
+  }
+
+
+}
